@@ -18,9 +18,9 @@ func checkError(err error) {
 
 
 func main() {
-    workerNum := 1024
+    workerNum := 128
 
-    var channel [1024]chan net.Conn
+    var channel [128]chan net.Conn
     for i := 0; i < workerNum; i++ {
         channel[i] = make(chan net.Conn, 10)
         go worker(channel[i])
