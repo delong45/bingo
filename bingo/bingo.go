@@ -49,5 +49,5 @@ func handleConnection(conn net.Conn) {
 }
 
 func processData(buf []byte, conn net.Conn) {
-    time.Sleep(2 * time.Second)
+    time.Sleep(50 * time.Millisecond)
 }

@@ -47,7 +47,7 @@ func worker(channel chan net.Conn) {
         case conn := <-channel:
             handleConnection(conn)
         case <- time.After(time.Second * 180):
-            fmt.Printf("Warnning: worker timeout(180s)")
+            fmt.Println("Warnning: worker timeout(180s)")
         }
     }
 }
@@ -72,5 +72,5 @@ func handleConnection(conn net.Conn) {
 }
 
 func processData(buf []byte, conn net.Conn) {
-    time.Sleep(2 * time.Second)
+    time.Sleep(50 * time.Millisecond)
 }

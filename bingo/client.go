@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-    times := 100000
+    times := 1000000
     start := time.Now()
 
     for i := 0; i < times; i++ {
@@ -26,7 +26,7 @@ func main() {
             continue
         }
         conn.Close()
-        time.Sleep(20 * time.Microsecond)
+        time.Sleep(1 * time.Microsecond)
     }
 
     end := time.Now()
